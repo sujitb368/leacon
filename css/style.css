@@ -1,0 +1,424 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Helvetica LT Std',sans-serif;
+}
+
+/* css variable */
+:root{
+    --btn_color : #ff5979;
+    --text_color : #fff;
+    --bullet_color : #00d6d6;
+}
+
+.margin_25{
+    margin-top: 25px;
+}
+.container{
+    padding: 50px 0;
+    width: 100%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.inner{    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    outline: none;
+}
+
+.bg_img{
+    height: 400px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.8)) , url("../img/testimonial.jpg")
+}
+.heading_1{
+    color: #fff;
+    text-transform: capitalize;
+    font-size: 40px;
+    line-height: 2;
+}
+.mt_100{
+    margin-top: 100px;
+}
+.pt_60{
+    padding-top: 60px;
+}
+.heading_2{
+    font-size: 40px;
+    line-height: 1.5;
+    color: #000;
+    padding-left: 10px;
+}
+.monthly_toggle{
+    margin: 30px 0;
+}
+.heading_small{
+    font-size: 40px;
+    line-height: 2;
+    color: #000;
+    text-align: center;
+}
+.p_text{
+    font-size: 20px;
+    color: #fff;
+    padding: 8px;
+    text-align: center;
+
+}
+.p{
+    font-size: 20px;
+    min-height: 60px;
+    padding: 8px;
+    margin: 1rem 0;
+    text-align: center;
+
+}
+.margin_x{
+    margin: 13px 0 20px 0;
+}
+li{
+    margin-top: 10px;
+}
+li::marker{
+    
+    color: var(--bullet_color);
+}
+.compare{
+    color: var(--btn_color);
+    font-size: 20px;
+    padding: 0 8px;
+    text-align: center;
+    margin: 1rem 0;
+}
+.btn_container{
+    margin-top: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn{
+    min-width: 100px;
+    text-transform: capitalize;
+    padding: 5px 7px;
+    border: none;
+    border-radius: 6px;
+    color: #fff;
+    background-color: var(--btn_color);
+}
+.btn_toggle{
+    position: relative;
+    background-color: var(--btn_color);
+    display: inline-block;
+    width: 30px;
+    height: 15px;
+    border-radius: 35%;
+}
+.btn_toggle_white{
+    position: absolute;
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-color: #fff;
+    left: 3px;
+    top: 2px;
+    border-radius: 50%;
+
+}
+.appoinment{
+    color: var(--btn_color) ;
+    text-transform: capitalize;
+    font-size: 20px;
+    margin: 20px 0;
+}
+.arrow{
+    font-size: 20px; 
+}
+
+.plan_container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+}
+.plan{
+   
+    flex:none;
+    border:1px solid #00d6d6;
+    cursor: pointer;
+    border-radius: 10px;
+    
+}
+.plan_wrap{
+    border-radius: 10px;
+}
+
+.plan:hover{
+    background-color: var(--btn_color);
+    color: #fff;
+    box-shadow: 2px 3px 3px 1px rgba(0, 0, 0, 0.2);
+    border: none;
+}
+.plan:hover .heading_small {    
+    color: #fff;    
+}
+.plan:hover .compare {    
+    color: #fff;    
+}
+.plan:hover .heading_2{    
+    color: #fff;
+    
+}
+.plan:hover .btn{
+    background-color: #fff;
+    color: var(--btn_color);
+
+}
+.img_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.img_small{
+    width: 50px;
+    
+}
+ul{
+    margin-left: 50px;
+}
+.bg_black{
+    background-color: #000;
+}
+
+
+/* ......Table........ */
+
+.table_bg{
+    background-color: #f3f3f3;
+}
+
+table{ 
+    border-collapse: collapse;
+    width: 100%;
+    min-width: 600px;
+    border-radius: 5px;
+    overflow: hidden;
+    border: 1px solid #6e6e6e;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+.row{    
+    cursor: pointer;  
+    display: grid;
+    grid-template-columns: repeat(5, minmax(120px, 1fr));
+}
+
+.row_header{
+    display: grid;
+    grid-template-columns: repeat(5, minmax(120px, 1fr));  
+    background-color: #00d6d6;
+    line-height: 2;
+    text-align: left;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+td,th{
+    line-height: 2;
+    padding: 5px;
+}
+td:nth-child(1){
+    background-color: #6e6e6e;
+    color: #fff;
+}
+td:nth-child(odd):not(:first-child){
+    background-color: #fff;
+}
+.row:hover td{
+    background-color: rgb(250, 166, 11);
+    color: #ffffff;
+    
+}
+.row:last-child td{
+    padding-bottom: 20px;
+}
+
+
+
+/* calculator section */
+.cal_info{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    /* grid-gap: 10px; */
+    outline: none;
+}
+.shadow{
+    box-shadow: 2px 3px 3px 1px rgb(0, 0, 0, .2);
+}
+.label{
+    background-color: rgb(241, 238, 238);
+    padding: 5px;
+}
+.your_usage{
+    
+    border: 1px solid #00d6d6;
+    margin: 0 15px;
+    border-radius: 10px;
+    padding: 5px 10px;
+}
+.p_usage{
+    margin: 5px 0;
+}
+.your_plan{
+    border:1px solid #00d6d6;
+    border-radius: 10px;
+}
+.plan_two {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-radius: 10px;
+}
+.c_plan{
+    /* margin: 0 10px; */
+    background-color:#00d6d6 ;
+    border-radius: 10px ;
+    margin-bottom: 15px;
+    text-align: center;
+    margin-left: 10px;
+}
+
+.cost{
+    padding: 0 19px;
+    line-height: 1.5;
+} 
+
+    .plan_two ul{
+        margin-left: 80px;
+        text-align: left;
+    }
+    .plan_two ul li::marker{
+        color: #fff;
+    }
+    .c_plan .r_plan{
+        color: #ffffff;
+    }
+    .c_plan .r_plan .btn{
+        background-color: #ffffff;
+        color: var(--btn_color);
+    }
+    .c_plan .heading_small{
+        color: #ffffff;
+    }
+    .c_plan .compare{
+        color: #ffffff;
+    }
+
+
+/* RESPONSIVE */
+@media screen and (max-width:770px) {
+    .scroll{
+        overflow-x: auto;
+    
+    }
+    .plan_container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 2px;
+    }
+    .c_heading {
+        font-size: 30px;
+        line-height: 1.9;
+        color: #000;
+        text-align: center;
+        
+    }
+    .plan:hover .c_heading{    
+        color: #fff;
+        
+    }
+}
+@media screen and (max-width:540px){
+    .scroll{
+        overflow-x: auto;
+    
+    }
+    .plan_container{
+        display: grid;
+        grid-template-columns: 1fr;
+    
+    }
+    .heading_1{
+        color: #fff;
+        text-transform: capitalize;
+        font-size: 30px;
+        line-height: 1.5;
+        text-align: center;
+    }
+    .heading_small {
+        font-size: 30px;
+        line-height: 2;
+        color: #000;
+        text-align: center;
+    }
+    .p_text{
+        font-size: 20px;
+        color: #fff;
+        padding: 8px;
+        text-align: center;
+    }
+    .p{
+        font-size: 20px;
+        min-height: 84px;
+        padding: 7px;
+        text-align: center;
+    }
+    .appoinment {
+        color: var(--btn_color);
+        text-transform: capitalize;
+        font-size: 20px;
+        margin: 20px 0;
+    }
+    .c_heading {
+        font-size: 30px;
+        line-height: 1.2;
+        color: #000;
+        padding-left: 2px;
+        min-height: 84px;
+        text-align: center;
+    }
+    .cal_info{
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-gap: 10px;
+    }
+    .plan_two{
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+    }
+    .plan_two ul{
+        margin-left: 20px;
+        text-align: left;
+    }
+    .plan_two ul li::marker{
+        color: #fff;
+    }
+    .c_plan .plan{
+        color: #ffffff;
+    }
+    .c_plan .plan .btn{
+        background-color: #ffffff;
+        color: var(--btn_color);
+    }
+    .c_plan .heading_small{
+        color: #ffffff;
+    }
+    .c_plan .compare{
+        color: #ffffff;
+    }
+
+}
