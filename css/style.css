@@ -1,8 +1,12 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Helvetica LT Std',sans-serif;
+    font-family: 'Montserrat', sans-serif;
 }
 
 /* css variable */
@@ -16,11 +20,12 @@
     margin-top: 25px;
 }
 .container{
-    padding: 50px 0;
+    padding: 50px 15px;
     width: 100%;
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
+    
 }
 .inner{    
     display: flex;
@@ -30,6 +35,7 @@
     position: relative;
     outline: none;
 }
+
 
 .bg_img{
     height: 400px;
@@ -47,20 +53,30 @@
 .mt_100{
     margin-top: 100px;
 }
-.pt_60{
-    padding-top: 60px;
+.mx_30{
+    margin: 30px 0;
+}
+.mb_30{
+    margin-bottom: 30px;
+}
+.px_60{
+    padding: 60px 0;
+}
+.px_5_10{
+    padding: 5px 10px;
 }
 .heading_2{
-    font-size: 40px;
-    line-height: 1.5;
+    font-size: 30px;
     color: #000;
-    padding-left: 10px;
+    
 }
+
+
 .monthly_toggle{
     margin: 30px 0;
 }
 .heading_small{
-    font-size: 40px;
+    font-size: 24px;
     line-height: 2;
     color: #000;
     text-align: center;
@@ -73,23 +89,31 @@
 
 }
 .p{
-    font-size: 20px;
-    min-height: 60px;
+    font-size: 15px;
+    min-height: 37px;
     padding: 8px;
-    margin: 1rem 0;
+    /* margin: 1rem 0; */
     text-align: center;
 
 }
 .margin_x{
     margin: 13px 0 20px 0;
 }
+ul{
+    margin-left: 40px;
+}
 li{
+    text-indent: -7px;
+    padding-left: -10px;
     margin-top: 10px;
 }
 li::marker{
-    
+    font-size: 21px;
     color: var(--bullet_color);
+    /* display: list-item;
+    vertical-align: middle; */
 }
+
 .compare{
     color: var(--btn_color);
     font-size: 20px;
@@ -142,28 +166,48 @@ li::marker{
     font-size: 20px; 
 }
 
+
+/* plan container */
 .plan_container{
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-
+    /* position: relative; */
+    
 }
 .plan{
-   
+    padding: 5px;
     flex:none;
     border:1px solid #00d6d6;
     cursor: pointer;
-    border-radius: 10px;
+    border-radius: 15px;
+    /* position: relative; */
+    
     
 }
 .plan_wrap{
+    border: 2px solid #fff;
     border-radius: 10px;
 }
 
+.city_white{
+    display: none;
+}
 .plan:hover{
     background-color: var(--btn_color);
     color: #fff;
     box-shadow: 2px 3px 3px 1px rgba(0, 0, 0, 0.2);
     border: none;
+    transform: scale(1.025);
+    
+}
+.plan:hover li::marker{
+    color: #fff;
+}
+.plan:hover .city_img {    
+    display: none;    
+}
+.plan:hover .city_white {    
+    display: block;    
 }
 .plan:hover .heading_small {    
     color: #fff;    
@@ -189,9 +233,7 @@ li::marker{
     width: 50px;
     
 }
-ul{
-    margin-left: 50px;
-}
+
 .bg_black{
     background-color: #000;
 }
@@ -211,6 +253,9 @@ table{
     overflow: hidden;
     border: 1px solid #6e6e6e;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+.table_wrap{
+    width: 100%;
 }
 .row{    
     cursor: pointer;  
@@ -257,52 +302,99 @@ td:nth-child(odd):not(:first-child){
     /* grid-gap: 10px; */
     outline: none;
 }
-.shadow{
-    box-shadow: 2px 3px 3px 1px rgb(0, 0, 0, .2);
+.max_1000{
+    max-width: 1000px;
 }
-.label{
+.your_info_container{
+    padding: 40px 42px 40px 25px;
+    border: 1px solid #00d6d6;
+    border-radius: 10px;
+}
+.shadow{
+    box-shadow: 0 0 10px rgb(0, 0, 0, .2);
+}
+.input{
     background-color: rgb(241, 238, 238);
-    padding: 5px;
+    padding: 10px;
+    width: 100%;
+    border-radius: 10px;
+    margin-top: 5px;
+    border: none;
+    margin-bottom: 20px;
 }
 .your_usage{
-    
-    border: 1px solid #00d6d6;
     margin: 0 15px;
     border-radius: 10px;
     padding: 5px 10px;
 }
-.p_usage{
-    margin: 5px 0;
+.range_bar{
+    appearance: none;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: rgb(192, 190, 190);
+    height: 6px;
+    width: 100%;
+
 }
+.range_bar::after{  
+    width: 50%;
+    cursor: pointer;    
+    background-color: #00d6d6;
+    height: 6px;
+  
+
+}
+.range_bar::-webkit-slider-thumb {   
+    appearance: none;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%; 
+    background: #00d6d6; 
+    cursor: pointer; 
+  }
+.p_usage{
+    margin: 15px 0 3px 0;
+    font-size: 16px;
+}
+
 .your_plan{
     border:1px solid #00d6d6;
     border-radius: 10px;
+    padding: 40px;
 }
 .plan_two {
     display: grid;
     grid-template-columns: 1fr 1fr;
     border-radius: 10px;
+    
 }
 .c_plan{
-    /* margin: 0 10px; */
+    margin: 0 10px;
     background-color:#00d6d6 ;
     border-radius: 10px ;
     margin-bottom: 15px;
     text-align: center;
-    margin-left: 10px;
 }
-
+.bold{
+    font-weight: bold;
+}
 .cost{
-    padding: 0 19px;
+    padding: 0 30px;
     line-height: 1.5;
 } 
 
+.p_18{
+    padding-left: 18px;
+}
     .plan_two ul{
-        margin-left: 80px;
+        margin-left: 40px;
         text-align: left;
     }
     .plan_two ul li::marker{
         color: #fff;
+    }
+    .r_plan{
+        padding: 10px;
     }
     .c_plan .r_plan{
         color: #ffffff;
@@ -318,8 +410,18 @@ td:nth-child(odd):not(:first-child){
         color: #ffffff;
     }
 
+    .text_center{
+        text-align: center;
+    }
+    .text_left{
+        text-align: left;
+    }
+
 
 /* RESPONSIVE */
+/* @media screen and(min-width:600px){
+
+} */
 @media screen and (max-width:770px) {
     .scroll{
         overflow-x: auto;
@@ -328,11 +430,11 @@ td:nth-child(odd):not(:first-child){
     .plan_container{
         display: grid;
         grid-template-columns: repeat(2, 1fr);
-        grid-gap: 2px;
+        grid-gap: 10px;
     }
     .c_heading {
         font-size: 30px;
-        line-height: 1.9;
+        line-height: 1.25;
         color: #000;
         text-align: center;
         
@@ -360,7 +462,7 @@ td:nth-child(odd):not(:first-child){
         text-align: center;
     }
     .heading_small {
-        font-size: 30px;
+        font-size: 24px;
         line-height: 2;
         color: #000;
         text-align: center;
@@ -395,17 +497,36 @@ td:nth-child(odd):not(:first-child){
         display: grid;
         grid-template-columns: 1fr;
         grid-gap: 10px;
+        
+    }
+    .your_usage{
+        margin: 0px 0px;
+        padding: 5px 0px;
     }
     .plan_two{
         display: grid;
         grid-template-columns: 2fr 1fr;
+        grid-gap: 7px;
+    }
+    .your_plan{
+        padding: 0 0;
+    }
+    .cost{
+        padding: 0 11px;
+        line-height: 1.5;
     }
     .plan_two ul{
-        margin-left: 20px;
+        margin-left: 30px;
         text-align: left;
+    }
+    .plan_two ul li{
+        text-indent: -1px;
     }
     .plan_two ul li::marker{
         color: #fff;
+    }
+    .c_plan{
+        margin: 0 0 11px 11px;
     }
     .c_plan .plan{
         color: #ffffff;
@@ -419,6 +540,17 @@ td:nth-child(odd):not(:first-child){
     }
     .c_plan .compare{
         color: #ffffff;
+    }
+    .mb_30{
+        margin: 11px;
+    }
+    .inner_table{    
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        position: relative;
+        outline: none;
     }
 
 }

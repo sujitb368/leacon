@@ -11,7 +11,7 @@
 
 <body>
     <section class="bg_img">
-        <div class="container">
+        <div class="container px_60">
             <div class="inner">
 
                 <h1 class="heading_1">the ultimate interactive platform</h1>
@@ -31,7 +31,7 @@
         <div class="container">
             <div class="inner">
 
-                <h1 class=" heading_2 mt_100">Select a Plan</h1>
+                <h1 class=" heading_2 font_20 mt_100">Select a Plan</h1>
                 <div class="monthly_toggle">
                     <p>Monthly <span class="btn_toggle"> <span class="btn_toggle_white"></span> </span>Annully (Save
                         15%) </p>
@@ -104,7 +104,8 @@
                             <p class="p rate">$79/mo</p>
                             <p class="p">+streaming fees</p>
                             <div class="img_container">
-                                <img class="img_small bg_black" src="./img/city-white.png" alt="">
+                                <img class="img_small city_img" src="./img/city.png" alt="">
+                                <img class="img_small city_white" src="./img/city-white.png" alt="">
                             </div>
                             <p class="p margin_x">Up to 1000 concurent viewers</p>
                             <ul class="ul_small">
@@ -123,7 +124,38 @@
                         </div>
 
                     </div>
+
                     <div class="plan ">
+                        <div class="plan_wrap">
+                            <h2 class="heading_small">Custom</h2>
+                            <p class="p">
+                                Bespoke solution for your needs
+                            </p>
+                            <h1 class="heading_2 text_center c_heading">Contact us</h1>
+
+                            <p class="p">to learn more</p>
+                            <div class="img_container">
+                                <img class="img_small" src="./img/custom-blue.png" alt="">
+                            </div>
+                            <p class="p margin_x">Over 1000 concurent viewers</p>
+                            <ul class="ul_small">
+                                <li class="li_item">ed ut perspiciatis unde</li>
+                                <li class="li_item">omins iste natus error sit </li>
+                                <li class="li_item">voluptatem accusantium</li>
+                                <li class="li_item">doloremque laudantium</li>
+                                <li class="li_item">
+                                    totam rem aperiam dolor
+                                </li>
+                            </ul>
+                            <p class="compare">Compare</p>
+                            <div class="btn_container">
+                                <button class="btn">Contact Us</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- ///// -->
+                    <!-- <div class="plan ">
                         <div class="plan_wrap">
                             <h2 class="heading_small">Custom</h2>
                             <p class="p">
@@ -150,7 +182,9 @@
                                 <button class="btn">Contact Us</button>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
+
+
                 </div>
             </div>
         </div>
@@ -158,8 +192,8 @@
 
     <section class="table_bg margin_25">
         <div class="container ">
-            <div class="inner">
-                <div >
+            <div class="inner scroll inner_table">
+                <div class="table_wrap">
                     <table class="table ">
                         <thead>
                             <tr class="row_header">
@@ -220,35 +254,42 @@
         </div>
     </section>
 
-    <section class="margin_25">
-        <div class="container">
+    <section class="margin_25 ">
+        <div class="container ">
             <div class="inner">
-                <h1 class=" heading_2 mt_100">Calculator</h1>
-                
+
+                <h1 class=" heading_2 text_center mt_100">Calculator</h1>
                 <div class="monthly_toggle">
                     <p>Monthly <span class="btn_toggle"> <span class="btn_toggle_white"></span> </span>Annully (Save
                         15%) </p>
                 </div>
-                
 
-
-                <div class="cal_info shadow">
+                <div class="cal_info ">
                     <div class="your_usage ">
-                        <h1 class="heading_2">Your Usage</h1>
-                        <p class="p_usage">How many viewers will you have?</p>
-                        <div class="label"> People</div>
-                        <p class="p_usage">How many minute they will watch?</p>
-                        <div class="label"> minute</div>
-                        <p class="p_usage">How many does your average viewer donate each stream?</p>
+                        <div class="your_info_container shadow">
+                            <h1 class="heading_2 mb_30">Your Usage</h1>
+                            <form action="">
+                                <label class="p_usage" for="">How many viewers will you have?</label>
+                                <input class="input" type="text" placeholder="People">
+                                <label class="p_usage" for="">How many minute they will watch?</label>
+                                <input class="input" type="text" placeholder="minute">
+                                <label class="p_usage" for="">How many does your average viewer donate each stream?</label>
+                                <input class="range_bar" type="range" min="1" max="100" value="50">
+                            </form>                            
+                        </div>
 
                     </div>
-                    <div class="your_plan">
-                        <h1 class="heading_2">
+
+                    <div class="your_plan shadow">
+                        <h1 class="heading_2 mb_30">
                             Recommended Plan
                         </h1>
-                        <div class="plan_two cal_info">
+                        <div class="plan_two ">
                             <div class="c_plan ">
                                 <div class="r_plan">
+                                    <div class="plan_wrap">
+
+                                    
                                     <h2 class="heading_small">City</h2>
                                     <p class="p">
                                         Bring it to scale
@@ -258,7 +299,7 @@
                                     <div class="img_container">
                                         <img class="img_small " src="./img/city-white.png" alt="">
                                     </div>
-                                    <p class="p">Up to 1000 concurent viewers</p>
+                                    <p class="p p_18 text_left">Up to 1000 concurent viewers</p>
                                     <ul class="ul_small">
                                         <li class="li_item">ed ut perspiciatis unde</li>
                                         <li class="li_item">omins iste natus error sit </li>
@@ -273,22 +314,30 @@
                                         <button class="btn">Buy Now</button>
                                     </div>
                                 </div>
+                                </div>
                             </div>
 
                             <div class="cost">
                                 <h3 class="heading_3">Cost Breakdown</h3>
+                                <br>
                                 <p class="p_cal">
-                                    Donation Revenue: $300
+                                    Donation Revenue: 
+                                    <span class="bold">$300
+                                    </span>
                                 </p>
                                 <p class="p_cal">
-                                    Strem Cost: $90
+                                    Strem Cost: <span class="bold">$90
+                                    </span>
                                 </p>
+                                <br>
                                 <p class="p_cal">
-                                    Total estimated earnings per stream:$210
+                                    Total estimated earnings per stream: <br><span class="bold">$210
+                                    </span>
                                 </p>
 
                             </div>
                         </div>
+                        <!-- </div> -->
                     </div>
                 </div>
             </div>
