@@ -65,6 +65,12 @@
 .px_5_10{
     padding: 5px 10px;
 }
+.pad{
+    padding: 30px;
+}
+.bg_white{
+    background-color: #fff;
+}
 .heading_2{
     font-size: 30px;
     color: #000;
@@ -386,10 +392,10 @@ td:nth-child(odd):not(:first-child){
 .p_18{
     padding-left: 18px;
 }
-    .plan_two ul{
-        margin-left: 40px;
-        text-align: left;
-    }
+.plan_two ul{
+    margin-left: 40px;
+    text-align: left;
+}
     .plan_two ul li::marker{
         color: #fff;
     }
@@ -417,7 +423,70 @@ td:nth-child(odd):not(:first-child){
         text-align: left;
     }
 
+/* FAQ */
+.faq_wrap{
+    width: 100%;
+    border-radius: 10px;
+    padding: 40px;
+}
+.faqs{
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.faqs:not(:last-child){
+   
+    border-bottom: 1px solid #f3f3f3;
 
+}
+.question{
+    color: #00d6d6;
+    font-size: 16px;
+    /* background-color: #f3f3f3; */
+    padding: 8px;
+}
+/* .bar{
+    width: 3px;
+    height: 50px;
+    display: inline-block;
+    background-color: #00d6d6;
+    margin-right: 10px;
+} */
+.ans{
+    height: auto;
+    border-left: 3px solid #00d6d6;
+    font-size: 16px;
+    height: 0;
+    overflow: hidden;
+    padding-left: 10px;
+    margin-left: 32px;
+}
+
+.icon_plus{
+    margin-right: 10px;
+}
+.icon_minus{
+    margin-right: 10px;
+    display: none;
+}
+.show{
+    /* position: absolute;
+    z-index: 5; */
+    display: inline-block;
+}
+.hide{
+    display: none;
+
+}
+
+.btn_2{
+    color:#ffffff;
+    background-color: #ff5979;
+    min-width: 100px;
+    text-transform: capitalize;
+    padding: 5px 7px;
+    border: none;
+    border-radius: 6px;
+}
 /* RESPONSIVE */
 /* @media screen and(min-width:600px){
 
@@ -505,15 +574,18 @@ td:nth-child(odd):not(:first-child){
     }
     .plan_two{
         display: grid;
-        grid-template-columns: 2fr 1fr;
+        grid-template-columns: 1fr;
         grid-gap: 7px;
     }
     .your_plan{
         padding: 0 0;
     }
+
     .cost{
         padding: 0 11px;
         line-height: 1.5;
+        grid-row: 1;
+
     }
     .plan_two ul{
         margin-left: 30px;
@@ -525,9 +597,9 @@ td:nth-child(odd):not(:first-child){
     .plan_two ul li::marker{
         color: #fff;
     }
-    .c_plan{
+    /* .c_plan{
         margin: 0 0 11px 11px;
-    }
+    } */
     .c_plan .plan{
         color: #ffffff;
     }
