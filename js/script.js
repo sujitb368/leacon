@@ -1,5 +1,4 @@
 
-
 let faqs = gsap.utils.toArray(".faqs")
 let question = gsap.utils.toArray(".question")
 let ans = gsap.utils.toArray(".ans")
@@ -53,42 +52,7 @@ function creatAnimation(e) {
     animations.push(tween);
 }
 
-// remaining same question click bug and code optimization 
-const faq = document.querySelectorAll(".faqs");
-
-let pre_icon = null;
-faq.forEach(icon => {
-
-    const icon_plus = icon.querySelector(".icon_plus");
-    const icon_minus = icon.querySelector(".icon_minus");
-    icon_minus.classList.remove("show");
-    icon.addEventListener("click", () => {
-
-        if (pre_icon != null) {
-            const pre_icon_minus = pre_icon.querySelector(".icon_minus");
-            const pre_icon_plus = pre_icon.querySelector(".icon_plus");
-            
-            pre_icon_minus.classList.remove("show");
-            pre_icon_plus.classList.remove("hide");
-            icon_minus.classList.add("show");
-            icon_plus.classList.add("hide");
-
-        } else {
-            if (icon_minus.classList.contains("show")) {
-                icon_minus.classList.remove("show");
-                icon_plus.classList.add("hide");
-
-            } else {
-
-                icon_plus.classList.add("hide");
-                icon_minus.classList.add("show");
-            }
-        }
-
-        pre_icon = icon;
 
 
-    })
-})
 
 

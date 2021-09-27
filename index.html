@@ -12,6 +12,7 @@
 
     
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/toggle.css">
 </head>
 
 <body>
@@ -38,8 +39,13 @@
 
                 <h1 class=" heading_2 font_20 mt_100">Select a Plan</h1>
                 <div class="monthly_toggle">
-                    <p>Monthly <span class="btn_toggle"> <span class="btn_toggle_white"></span> </span>Annully (Save
-                        15%) </p>
+                    <span class="monthly">Monthly</span>
+                    <label class="  switch">
+                        <input class="btn_toggle" type="checkbox">
+                        <span class="slider round"></span>
+                      </label>
+                    
+                    <span class="yearly">Annully (Save 15%)</span> 
                 </div>
 
 
@@ -78,7 +84,8 @@
                             <p class="p">
                                 Grow your community
                             </p>
-                            <p class="p rate">$49/mo</p>
+                            <p class="p toggle_price show1 rate">$49/mo</p>
+                            <p class="p toggle_price hide rate">$499/yr</p>
                             <p class="p">+streaming fees</p>
                             <div class="img_container">
                                 <img class="img_small" src="./img/town-blue.png" alt="">
@@ -106,7 +113,8 @@
                             <p class="p">
                                 Bring it to scale
                             </p>
-                            <p class="p rate">$79/mo</p>
+                            <p class="p toggle_price show1 rate">$79/mo</p>
+                            <p class="p toggle_price hide rate">$799/yr</p>
                             <p class="p">+streaming fees</p>
                             <div class="img_container">
                                 <img class="img_small city_img" src="./img/city.png" alt="">
@@ -264,9 +272,15 @@
             <div class="inner">
 
                 <h1 class=" heading_2 text_center mt_100">Calculator</h1>
+
                 <div class="monthly_toggle">
-                    <p>Monthly <span class="btn_toggle"> <span class="btn_toggle_white"></span> </span>Annully (Save
-                        15%) </p>
+                    <span class="monthly">Monthly</span>
+                    <label class="  switch">
+                        <input class="btn_toggle" type="checkbox">
+                        <span class="slider round"></span>
+                      </label>
+                    
+                    <span class="yearly">Annully (Save 15%)</span> 
                 </div>
 
                 <div class="cal_info ">
@@ -275,11 +289,12 @@
                             <h1 class="heading_2 mb_30">Your Usage</h1>
                             <form action="">
                                 <label class="p_usage" for="">How many viewers will you have?</label>
-                                <input class="input" type="text" placeholder="People">
+                                <input class="input" id="people_input" min="1" type="text" placeholder="People" >
                                 <label class="p_usage" for="">How many minute they will watch?</label>
-                                <input class="input" type="text" placeholder="minute">
+                                <input class="input" id="minute_input" type="text" min="1" placeholder="minute">
                                 <label class="p_usage" for="">How many does your average viewer donate each stream?</label>
-                                <input class="range_bar" type="range" min="1" max="100" value="50">
+                                <input class="range_bar" id="range_input" type="range" min="1"  >
+                                <span >$<span class="range_text">0</span></span>
                             </form>                            
                         </div>
 
@@ -299,7 +314,8 @@
                                     <p class="p">
                                         Bring it to scale
                                     </p>
-                                    <p class="p rate">$79/mo</p>
+                                    <p class="p show1 toggle_price rate">$79/mo</p>
+                                    <p class="p hide toggle_price rate">$799/yr</p>
                                     <p class="p">+streaming fees</p>
                                     <div class="img_container">
                                         <img class="img_small " src="./img/city-white.png" alt="">
@@ -327,16 +343,16 @@
                                 <br>
                                 <p class="p_cal">
                                     Donation Revenue: 
-                                    <span class="bold">$300
+                                    <span id="donation" class="bold">$300
                                     </span>
                                 </p>
                                 <p class="p_cal">
-                                    Strem Cost: <span class="bold">$90
+                                    Strem Cost: <span id="stream" class="bold">$90
                                     </span>
                                 </p>
                                 <br>
                                 <p class="p_cal">
-                                    Total estimated earnings per stream: <br><span class="bold">$210
+                                    Total estimated earnings per stream: <br><span id="total_estimate" class="bold">$210
                                     </span>
                                 </p>
 
@@ -401,6 +417,9 @@
     </section>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
     <script src="./js/script.js"></script>
+    <script src="./js/toggle.js"></script>
+    <script src="./js/faq.js"></script>
+    <script src="./js/cal.js"></script>
 </body>
 
 </html>

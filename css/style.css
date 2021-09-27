@@ -76,10 +76,11 @@
     color: #000;
     
 }
-
-
-.monthly_toggle{
+.monthly_toggle {
     margin: 30px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .heading_small{
     font-size: 24px;
@@ -312,7 +313,7 @@ td:nth-child(odd):not(:first-child){
     max-width: 1000px;
 }
 .your_info_container{
-    padding: 40px 42px 40px 25px;
+    padding: 40px 32px 40px 25px;
     border: 1px solid #00d6d6;
     border-radius: 10px;
 }
@@ -339,7 +340,8 @@ td:nth-child(odd):not(:first-child){
     border-radius: 10px;
     background-color: rgb(192, 190, 190);
     height: 6px;
-    width: 100%;
+    width: 85%;
+    display: inline;
 
 }
 .range_bar::after{  
@@ -432,6 +434,7 @@ td:nth-child(odd):not(:first-child){
 .faqs{
     padding-top: 20px;
     padding-bottom: 20px;
+    cursor: pointer;
 }
 .faqs:not(:last-child){
    
@@ -444,13 +447,7 @@ td:nth-child(odd):not(:first-child){
     /* background-color: #f3f3f3; */
     padding: 8px;
 }
-/* .bar{
-    width: 3px;
-    height: 50px;
-    display: inline-block;
-    background-color: #00d6d6;
-    margin-right: 10px;
-} */
+
 .ans{
     height: auto;
     border-left: 3px solid #00d6d6;
@@ -469,9 +466,12 @@ td:nth-child(odd):not(:first-child){
     display: none;
 }
 .show{
-    /* position: absolute;
-    z-index: 5; */
+    
     display: inline-block;
+}
+.show1{
+    
+    display: block;
 }
 .hide{
     display: none;
