@@ -8,9 +8,9 @@
     <title>Document</title>
     <script src="https://use.fontawesome.com/4805dfd7d5.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    
 
-    
+
+
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/toggle.css">
 </head>
@@ -43,23 +43,25 @@
                     <label class="  switch">
                         <input class="btn_toggle" type="checkbox">
                         <span class="slider round"></span>
-                      </label>
-                    
-                    <span class="yearly">Annully (Save 15%)</span> 
+                    </label>
+
+                    <span class="yearly">Annully (Save 15%)</span>
                 </div>
 
 
-                <div class="plan_container ">
-                    <div class="plan ">
+                <div class="plan_container">
+                    <div class="plan plan1 shadow">
                         <div class=" plan_wrap">
                             <h2 class="heading_small">Village</h2>
                             <p class="p">
                                 Test the rater
                             </p>
-                            <p class="p rate">$0/mo</p>
+                            <p class="p toggle_price show1 rate">$0/mo</p>
+                            <p class="p toggle_price hide rate">$0/yr</p>
                             <p class="p">+streaming fees</p>
                             <div class="img_container">
-                                <img class="img_small" src="./img/village-blue.png" alt="">
+                                <img class="img_small city_img" src="./img/village-blue.png" alt="">
+                                <img class="img_small city_white" src="./img/Village-White.png" alt="">
                             </div>
                             <p class="p margin_x">Up to 25 concurent viewers</p>
                             <ul class="ul_small">
@@ -78,7 +80,7 @@
                         </div>
 
                     </div>
-                    <div class="plan ">
+                    <div class="plan plan2 shadow">
                         <div class="plan_wrap">
                             <h2 class="heading_small">Town</h2>
                             <p class="p">
@@ -88,7 +90,8 @@
                             <p class="p toggle_price hide rate">$499/yr</p>
                             <p class="p">+streaming fees</p>
                             <div class="img_container">
-                                <img class="img_small" src="./img/town-blue.png" alt="">
+                                <img class="img_small city_img" src="./img/town-blue.png" alt="">
+                                <img class="img_small city_white" src="./img/Town-white.png" alt="">
                             </div>
                             <p class="p margin_x">Up to 500 concurent viewers</p>
                             <ul class="ul_small">
@@ -107,7 +110,7 @@
                         </div>
 
                     </div>
-                    <div class="plan ">
+                    <div class="plan plan3 shadow">
                         <div class="plan_wrap">
                             <h2 class="heading_small">City</h2>
                             <p class="p">
@@ -138,7 +141,7 @@
 
                     </div>
 
-                    <div class="plan ">
+                    <div class="plan plan4 shadow">
                         <div class="plan_wrap">
                             <h2 class="heading_small">Custom</h2>
                             <p class="p">
@@ -148,7 +151,8 @@
 
                             <p class="p">to learn more</p>
                             <div class="img_container">
-                                <img class="img_small" src="./img/custom-blue.png" alt="">
+                                <img class="img_small city_img" src="./img/custom-blue.png" alt="">
+                                <img class="img_small city_white" src="./img/custom-White.png" alt="">
                             </div>
                             <p class="p margin_x">Over 1000 concurent viewers</p>
                             <ul class="ul_small">
@@ -166,36 +170,9 @@
                             </div>
                         </div>
                     </div>
-                    
-                    <!-- ///// -->
-                    <!-- <div class="plan ">
-                        <div class="plan_wrap">
-                            <h2 class="heading_small">Custom</h2>
-                            <p class="p">
-                                Bespoke solution for your needs
-                            </p>
-                            <h1 class="heading_2 c_heading">Contact us</h1>
 
-                            <p class="p">to learn more</p>
-                            <div class="img_container">
-                                <img class="img_small" src="./img/custom-blue.png" alt="">
-                            </div>
-                            <p class="p margin_x">Over 1000 concurent viewers</p>
-                            <ul class="ul_small">
-                                <li class="li_item">ed ut perspiciatis unde</li>
-                                <li class="li_item">omins iste natus error sit </li>
-                                <li class="li_item">voluptatem accusantium</li>
-                                <li class="li_item">doloremque laudantium</li>
-                                <li class="li_item">
-                                    totam rem aperiam dolor
-                                </li>
-                            </ul>
-                            <p class="compare">Compare</p>
-                            <div class="btn_container">
-                                <button class="btn">Contact Us</button>
-                            </div>
-                        </div>
-                    </div> -->
+                    
+                    
 
 
                 </div>
@@ -278,9 +255,9 @@
                     <label class="  switch">
                         <input class="btn_toggle" type="checkbox">
                         <span class="slider round"></span>
-                      </label>
-                    
-                    <span class="yearly">Annully (Save 15%)</span> 
+                    </label>
+
+                    <span class="yearly">Annully (Save 15%)</span>
                 </div>
 
                 <div class="cal_info ">
@@ -289,13 +266,18 @@
                             <h1 class="heading_2 mb_30">Your Usage</h1>
                             <form action="">
                                 <label class="p_usage" for="">How many viewers will you have?</label>
-                                <input class="input" id="people_input" min="1" type="text" placeholder="People" >
+                                <input class="input" id="people_input" min="1" type="text" value="350"
+                                    placeholder="People">
                                 <label class="p_usage" for="">How many minute they will watch?</label>
-                                <input class="input" id="minute_input" type="text" min="1" placeholder="minute">
-                                <label class="p_usage" for="">How many does your average viewer donate each stream?</label>
-                                <input class="range_bar" id="range_input" type="range" min="1"  >
-                                <span >$<span class="range_text">0</span></span>
-                            </form>                            
+                                <input class="input" id="minute_input" type="text" min="1" value="50"
+                                    placeholder="minute">
+                                <label class="p_usage" for="">How many does your average viewer donate each
+                                    stream?</label>
+                                <div>
+                                    <input class="range_bar" id="range_input" type="range" min="1" value="50">
+                                    <span>$<span class="range_text">0</span></span>
+                                </div>
+                            </form>
                         </div>
 
                     </div>
@@ -307,56 +289,127 @@
                         <div class="plan_two ">
                             <div class="c_plan ">
                                 <div class="r_plan">
-                                    <div class="plan_wrap">
 
-                                    
-                                    <h2 class="heading_small">City</h2>
-                                    <p class="p">
-                                        Bring it to scale
-                                    </p>
-                                    <p class="p show1 toggle_price rate">$79/mo</p>
-                                    <p class="p hide toggle_price rate">$799/yr</p>
-                                    <p class="p">+streaming fees</p>
-                                    <div class="img_container">
-                                        <img class="img_small " src="./img/city-white.png" alt="">
+
+
+                                    <div class="plan_wrap plan_town">
+                                        <h2 class="heading_small">Town</h2>
+                                        <p class="p">
+                                            Grow your community
+                                        </p>
+                                        <p class="p toggle_price show1 rate">$49/mo</p>
+                                        <p class="p toggle_price hide rate">$499/yr</p>
+                                        <p class="p">+streaming fees</p>
+                                        <div class="img_container">
+                                            <img class="img_small " src="./img/Town-white.png" alt="">
+
+                                        </div>
+                                        <p class="p p_18 text_left ">Up to 500 concurent viewers</p>
+                                        <ul class="ul_small">
+                                            <li class="li_item">ed ut perspiciatis unde</li>
+                                            <li class="li_item">omins iste natus error sit </li>
+                                            <li class="li_item">voluptatem accusantium</li>
+                                            <li class="li_item">doloremque laudantium</li>
+                                            <li class="li_item">
+                                                totam rem aperiam dolor
+                                            </li>
+                                        </ul>
+                                        <p class="compare">Compare</p>
+                                        <div class="btn_container">
+                                            <button class="btn">Buy Now</button>
+                                        </div>
                                     </div>
-                                    <p class="p p_18 text_left">Up to 1000 concurent viewers</p>
-                                    <ul class="ul_small">
-                                        <li class="li_item">ed ut perspiciatis unde</li>
-                                        <li class="li_item">omins iste natus error sit </li>
-                                        <li class="li_item">voluptatem accusantium</li>
-                                        <li class="li_item">doloremque laudantium</li>
-                                        <li class="li_item">
-                                            totam rem aperiam dolor
-                                        </li>
-                                    </ul>
-                                    <p class="compare">Compare</p>
-                                    <div class="btn_container">
-                                        <button class="btn">Buy Now</button>
+
+                                    <div class="plan_wrap hide plan_city">
+                                        <h2 class="heading_small">City</h2>
+                                        <p class="p">
+                                            Bring it to scale
+                                        </p>
+                                        <p class="p show1 toggle_price rate">$79/mo</p>
+                                        <p class="p hide toggle_price rate">$799/yr</p>
+                                        <p class="p">+streaming fees</p>
+                                        <div class="img_container">
+                                            <img class="img_small " src="./img/city-white.png" alt="">
+                                        </div>
+                                        <p class="p p_18 text_left">Up to 1000 concurent viewers</p>
+                                        <ul class="ul_small">
+                                            <li class="li_item">ed ut perspiciatis unde</li>
+                                            <li class="li_item">omins iste natus error sit </li>
+                                            <li class="li_item">voluptatem accusantium</li>
+                                            <li class="li_item">doloremque laudantium</li>
+                                            <li class="li_item">
+                                                totam rem aperiam dolor
+                                            </li>
+                                        </ul>
+                                        <p class="compare">Compare</p>
+                                        <div class="btn_container">
+                                            <button class="btn">Buy Now</button>
+                                        </div>
                                     </div>
-                                </div>
+
+                                    <div class="plan_wrap hide plan_custom">
+                                        <h2 class="heading_small">Custom</h2>
+                                        <p class="p">
+                                            Bespoke solution for your needs
+                                        </p>
+                                        <h1 class="heading_2 text_white text_center c_heading">Contact us</h1>
+
+                                        <p class="p">to learn more</p>
+                                        <div class="img_container">
+                                            <img class="img_small" src="./img/custom-White.png" alt="">
+                                        </div>
+                                        <p class="p p_18 text_left ">Over 1000 concurent viewers</p>
+                                        <ul class="ul_small">
+                                            <li class="li_item">ed ut perspiciatis unde</li>
+                                            <li class="li_item">omins iste natus error sit </li>
+                                            <li class="li_item">voluptatem accusantium</li>
+                                            <li class="li_item">doloremque laudantium</li>
+                                            <li class="li_item">
+                                                totam rem aperiam dolor
+                                            </li>
+                                        </ul>
+                                        <p class="compare">Compare</p>
+                                        <div class="btn_container">
+                                            <button class="btn">Contact Us</button>
+                                        </div>
+                                    </div>
+
+
+
                                 </div>
                             </div>
+
+
 
                             <div class="cost">
-                                <h3 class="heading_3">Cost Breakdown</h3>
-                                <br>
-                                <p class="p_cal">
-                                    Donation Revenue: 
-                                    <span id="donation" class="bold">$300
-                                    </span>
-                                </p>
-                                <p class="p_cal">
-                                    Strem Cost: <span id="stream" class="bold">$90
-                                    </span>
-                                </p>
-                                <br>
-                                <p class="p_cal">
-                                    Total estimated earnings per stream: <br><span id="total_estimate" class="bold">$210
-                                    </span>
-                                </p>
+                                <div class="cost_info_wrap">
+                                    <h3 class="heading_3">Cost Breakdown</h3>
+                                    <br>
+                                    <p class="p_cal">
+                                        Donation Revenue:
+                                        <span id="donation" class="bold">$300
+                                        </span>
+                                    </p>
+                                    <p class="p_cal">
+                                        Strem Cost: <span id="stream" class="bold">$90
+                                        </span>
+                                    </p>
+                                    <br>
+                                    <p class="p_cal">
+                                        Total estimated earnings per stream: <br><span id="total_estimate"
+                                            class="bold">$210
+                                        </span>
+                                    </p>
+                                    <div class="contact shadow hide btn_2">
+                                        Contact us
+                                    </div>
+                                    <div class="contact_container hide ">
 
+                                    </div>
+                                </div>
                             </div>
+
+
                         </div>
                         <!-- </div> -->
                     </div>
@@ -371,7 +424,7 @@
             <div class="inner  ">
                 <h1 class="heading_2 mb_30">Frequently Asked Questions</h1>
                 <div class="faq_wrap shadow bg_white pad">
-                    
+
                     <div class="faqs">
                         <p class="question">
                             <i class="fa fa-plus icon_plus "></i>
@@ -379,10 +432,17 @@
                             question comes here
                         </p>
                         <p class="ans ">
-                            <span class="bar"></span>Lorem ipsum dolor sit amet consectetur adipisicing Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam quam illo repudiandae consequuntur? Sequi doloremque soluta aliquid dolor est tenetur laborum blanditiis provident aliquam cumque hic ipsam adipisci eos incidunt modi veniam officiis, accusamus molestias quibusdam rerum quis aut ut distinctio dicta! Amet dicta ut praesentium consectetur, nostrum architecto corrupti consequatur alias dignissimos, neque tempora a veniam incidunt, cupiditate totam quaerat necessitatibus quis. Maxime dolores modi perspiciatis? Atque, accusamus pariatur.
-                           
+                            <span class="bar"></span>Lorem ipsum dolor sit amet consectetur adipisicing Lorem ipsum
+                            dolor sit, amet consectetur adipisicing elit. Quisquam quam illo repudiandae consequuntur?
+                            Sequi doloremque soluta aliquid dolor est tenetur laborum blanditiis provident aliquam
+                            cumque hic ipsam adipisci eos incidunt modi veniam officiis, accusamus molestias quibusdam
+                            rerum quis aut ut distinctio dicta! Amet dicta ut praesentium consectetur, nostrum
+                            architecto corrupti consequatur alias dignissimos, neque tempora a veniam incidunt,
+                            cupiditate totam quaerat necessitatibus quis. Maxime dolores modi perspiciatis? Atque,
+                            accusamus pariatur.
+
                         </p>
-                    
+
                     </div>
                     <div class="faqs">
                         <p class="question">
@@ -391,10 +451,14 @@
                             question comes here
                         </p>
                         <p class="ans ">
-                            
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet consectetur, adipisicing elit. Repellendus odit inventore ipsa fuga, ipsum sequi, ducimus rerum, cupiditate facilis ut repudiandae doloremque excepturi beatae minima itaque tempora dolores cum error deleniti omnis provident. Ea dolorem voluptates deleniti, saepe laboriosam ipsam cupiditate eveniet laborum blanditiis doloremque odio, dolor, harum optio! Temporibus.
+
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Lorem ipsum dolor sit amet
+                            consectetur, adipisicing elit. Repellendus odit inventore ipsa fuga, ipsum sequi, ducimus
+                            rerum, cupiditate facilis ut repudiandae doloremque excepturi beatae minima itaque tempora
+                            dolores cum error deleniti omnis provident. Ea dolorem voluptates deleniti, saepe laboriosam
+                            ipsam cupiditate eveniet laborum blanditiis doloremque odio, dolor, harum optio! Temporibus.
                         </p>
-                    
+
                     </div>
                     <div class="faqs">
                         <p class="question">
@@ -403,10 +467,10 @@
                             question comes here
                         </p>
                         <p class="ans ">
-                            
+
                             answer comes here
                         </p>
-                    
+
                     </div>
                 </div>
                 <div class="btn_container">
@@ -415,6 +479,9 @@
             </div>
         </div>
     </section>
+
+
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.7.1/gsap.min.js"></script>
     <script src="./js/script.js"></script>
     <script src="./js/toggle.js"></script>

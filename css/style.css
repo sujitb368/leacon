@@ -138,11 +138,12 @@ li::marker{
 .btn{
     min-width: 100px;
     text-transform: capitalize;
-    padding: 5px 7px;
+    padding: 15px 15px;
     border: none;
     border-radius: 6px;
     color: #fff;
     background-color: var(--btn_color);
+    cursor: pointer;
 }
 .btn_toggle{
     position: relative;
@@ -191,6 +192,18 @@ li::marker{
     
     
 }
+.plan1{
+    z-index: 1;
+}
+.plan2{
+    z-index: 2;
+}
+.plan3{
+    z-index: 3;
+}
+.plan4{
+    z-index: 4;
+}
 .plan_wrap{
     border: 2px solid #fff;
     border-radius: 10px;
@@ -200,6 +213,7 @@ li::marker{
     display: none;
 }
 .plan:hover{
+    z-index: 5;
     background-color: var(--btn_color);
     color: #fff;
     box-shadow: 2px 3px 3px 1px rgba(0, 0, 0, 0.2);
@@ -251,7 +265,6 @@ li::marker{
 .table_bg{
     background-color: #f3f3f3;
 }
-
 table{ 
     border-collapse: collapse;
     width: 100%;
@@ -318,7 +331,9 @@ td:nth-child(odd):not(:first-child){
     border-radius: 10px;
 }
 .shadow{
-    box-shadow: 0 0 10px rgb(0, 0, 0, .2);
+
+    /* box-shadow: 0 0 10px rgb(0, 0, 0, .2); */
+    box-shadow: 0px 20px 74px -24px #0000005c;
 }
 .input{
     background-color: rgb(241, 238, 238);
@@ -338,27 +353,28 @@ td:nth-child(odd):not(:first-child){
     appearance: none;
     cursor: pointer;
     border-radius: 10px;
-    background-color: rgb(192, 190, 190);
     height: 6px;
     width: 85%;
     display: inline;
-
-}
-.range_bar::after{  
-    width: 50%;
-    cursor: pointer;    
-    background-color: #00d6d6;
+    position: relative;
     height: 6px;
-  
+    background-image: linear-gradient(to right, #00d6d6 50%, rgb(192, 190, 190) 50% );
 
 }
+
+
+
 .range_bar::-webkit-slider-thumb {   
     appearance: none;
-    width: 10px;
-    height: 10px;
+    width: 20px;
+    height: 20px;
+    /* position: absolute; */
     border-radius: 50%; 
     background: #00d6d6; 
     cursor: pointer; 
+    /* transform: translateX(-50%);
+    left: 50%;
+    bottom: -7px; */
   }
 .p_usage{
     margin: 15px 0 3px 0;
@@ -424,7 +440,31 @@ td:nth-child(odd):not(:first-child){
     .text_left{
         text-align: left;
     }
-
+    .text_white{
+        color: #fff;
+    }
+.cost_info_wrap{
+    position: relative;
+} 
+ .contact_container{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;   
+    background-color: #ffffff;
+    z-index: 1;
+}
+.contact{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    box-shadow: 20px 20px 132px 70px #0000005c;
+    text-transform: capitalize;
+    cursor: pointer;
+}
 /* FAQ */
 .faq_wrap{
     width: 100%;
@@ -483,7 +523,7 @@ td:nth-child(odd):not(:first-child){
     background-color: #ff5979;
     min-width: 100px;
     text-transform: capitalize;
-    padding: 5px 7px;
+    padding: 15px 25px;
     border: none;
     border-radius: 6px;
 }
