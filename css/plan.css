@@ -1,0 +1,107 @@
+
+@keyframes hover_animation{
+    0%{
+        transform: translateX(-10px);
+    }
+    50%{
+        transform: translateX(-30px);
+    }
+    100%{
+        transform: translateX(0) scale(var(--x)) ;
+    }
+}
+
+.plan_container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /* position: relative; */
+    
+}
+.plan{
+    padding: 5px;
+    flex:none;
+    border:1px solid #00d6d6;
+    cursor: pointer;
+    border-radius: 10px;
+    background-color: #fff;
+    /* position: relative; */
+    
+    
+}
+.plan1{
+    z-index: 1;
+}
+.plan2{
+    z-index: 2;
+}
+.plan3{
+    z-index: 3;
+}
+.plan4{
+    z-index: 4;
+}
+.plan_wrap{
+    border: 2px solid #fff;
+    border-radius: 10px;
+}
+
+.city_white{
+    display: none;
+}
+.plan:hover:not(:last-child){
+    animation-duration: .5s;
+    animation-name: hover_animation;
+    animation-delay: 0;
+    animation-direction: alternate;
+    animation-fill-mode: forwards;
+    /* animation-timing-function: ease-in; */
+}
+.plan:hover{
+    z-index: 5;
+    background-color: var(--btn_color);
+    color: #fff;
+    box-shadow: 2px 3px 3px 1px rgba(0, 0, 0, 0.2);
+    border: none;
+    transform: scale(var(--x));
+    transition: all 0.2s ease;   
+    
+    
+}
+.plan:hover li::marker{
+    color: #fff;
+}
+.plan:hover .city_img {    
+    display: none;    
+}
+.plan:hover .city_white {    
+    display: block;    
+}
+.plan:hover .heading_small {    
+    color: #fff;    
+}
+.plan:hover .compare {    
+    color: #fff;    
+}
+.plan:hover .heading_2{    
+    color: #fff;
+    
+}
+.plan:hover .btn{
+    background-color: #fff;
+    color: var(--btn_color);
+
+}
+.img_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.img_small{
+    width: 50px;
+    
+}
+
+.bg_black{
+    background-color: #000;
+}
+

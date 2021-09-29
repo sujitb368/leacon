@@ -92,10 +92,19 @@ minute_input.addEventListener("input", ()=>{
 
     }
 })
-range_input.addEventListener("input", ()=>{    
-    if(range_input.value != ""){
-        // range_input.style("range_bar::-webkit-slider-thumb", `left:${range_input.value}%`)
-        parseInt(state.range = range_input.value);
+
+const range_bar = document.querySelector(".range_bar");
+
+range_input.addEventListener("input", ()=>{   
+    if(range_input.value != ""){   
+
+    let left = range_input.value ;
+    
+        parseInt(state.range = range_input.value); 
+    
+        range_bar.style.background = `linear-gradient( 90deg, #00d6d6 ${left}%, rgb(192, 190, 190) ${left}% )`
+
+       
 
         range_text.innerHTML = range_input.value;
     
